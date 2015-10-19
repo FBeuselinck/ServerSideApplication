@@ -1,0 +1,30 @@
+﻿
+
+<h2>Bestel (Stap 2)</h2>
+<form method="post" action="next?step=3">
+    <label>Welke tablet wenst u ?</label><br />
+
+    <select name="tablet">
+        @foreach (var tablet in ViewBag.Tablets)
+        {
+            <option value="@tablet.ID">@tablet.Name</option>
+        }
+    </select>
+    <input type="hidden" name="company" value="@ViewBag.Company" />
+    <input type="hidden" name="firstname" value="@ViewBag.FirstName" />
+    
+    <input type="hidden" name="lastname" value="@ViewBag.LastName" />
+
+    <br />
+    <br />
+    <label>Accessoires</label><br />
+    <label for="case">Tas</label>
+    <input type="checkbox" name="case" /><br />
+    <label for="assurance">Verzekering</label>
+    <input type="checkbox" name="assurance" /><br />
+    <br />
+    <br />
+
+    <input type="submit" value="Bestel" name="next" />
+</form>
+

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Stap2";
+}
+
+<h2>Bestel (Stap2)</h2>
+<form action="/Bestel/Overzicht" method="post">
+    <input type="hidden" name="bedrijf" value="@ViewBag.Bedrijf" />
+    <input type="hidden" name="voornaam" value="@ViewBag.Voornaam" />
+    <input type="hidden" name="achternaam" value="@ViewBag.Achternaam" />
+
+    <div>
+        <label for="product">Welke tablet wenst u?</label>
+        <select name="product" id="product">
+            <option value="iPad Mini">iPad Mini</option>
+            <option value="iPad Air">iPad Air</option>
+            <option value="Nexus 7">Nexus 7</option>
+            <option value="Surface 2">Surface 2</option>
+        </select>
+    </div>
+    <div>
+        Accessoires<br />
+        <input type="checkbox" name="accessoires" value="tas" />Tas <br />
+        <input type="checkbox" name="accessoires" value="verzekering" />Verzekering
+    </div>
+    <div>
+        <input type="submit" name="bestel" value="Bestel" />
+    </div>
+</form>

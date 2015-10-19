@@ -1,0 +1,23 @@
+﻿@model Zoekertje
+
+@using (Html.BeginForm("Delete", "Zoekertjes", FormMethod.Post))
+{
+    <h2>Wenst u dit zoekertje te verwijderen?</h2>
+
+    @Html.DisplayFor(Zoekertje => Zoekertje.Titel)
+    @Html.DisplayFor(Zoekertje => Zoekertje.Omschrijving)
+
+    <h3>Reden van verwijderen</h3>
+
+    foreach (DeleteReden deleteReden in ViewBag.DeleteRedens)
+    {
+        @Html.RadioButton("Delete", deleteReden);
+        @Html.Label(deleteReden.Naam);
+        <br />
+    }
+
+    <input type="submit" name="delete" value="Delete" />
+    @Html.ActionLink("Terug", "Index");
+}
+
+

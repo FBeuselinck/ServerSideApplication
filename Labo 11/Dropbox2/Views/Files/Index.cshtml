@@ -1,0 +1,97 @@
+﻿@model Dropbox2.Models.FileRegistration
+
+@{
+    ViewBag.Title = "Index";
+}
+@section Scripts {
+    <script src="~/Scripts/jquery.signalR-2.1.2.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+            var counters = $.connection.counters;
+
+            $.connection.hub.start().done(function () {
+                //ophalen via de server
+                counters.server.getDownloadFiles();
+                
+                
+            });
+            counters.client.numberOfFilesDownloaded = function (numberOfFiles) {
+                $("#downloadedFiles").html("Totaal aantal bestanden gedownload: " + numberOfFiles);
+            }
+        })
+    </script>
+}
+
+
+<div>
+    <h4>Mijn bestanden</h4>
+    <hr />
+    <p id="downloadedFiles"></p>
+    <table class="dl-horizontal">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+        </tr>
+        @for (int i = 0; i < ViewBag.Lijst.Count; i++)
+        {
+            <tr>
+                <td>@ViewBag.Lijst[i].Description</td>
+                <td>@ViewBag.Lijst[i].FileName</td>
+                <td><a href="../files/download/@ViewBag.Lijst[i].FileId">Download</a></td>
+                <td><a href="../files/edit/@ViewBag.Lijst[i].FileId">Edit</a></td>
+                <td><a href="../files/delete/@ViewBag.Lijst[i].FileId">Delete</a></td>
+            </tr>
+        }
+
+        </table>
+    </br>
+    <table>
+        <h4>Bestanden waar ik toegang tot heb</h4>
+        <hr />
+        <table class="dl-horizontal">
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.FileName)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+            </tr>
+            @for (int i = 0; i < ViewBag.Lijst2.Count; i++)
+            {
+                <tr>
+                    <td>@ViewBag.Lijst2[i].Description</td>
+                    <td>@ViewBag.Lijst2[i].FileName</td>
+                    <td><a href="../files/download/@ViewBag.Lijst2[i].FileId">Download</a></td>
+                    <td><a href="../files/delete/@ViewBag.Lijst2[i].FileId">Delete</a></td>
+                </tr>
+            }
+
+
+            </table>
+</div>
+<p>
+    
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+
+</p>

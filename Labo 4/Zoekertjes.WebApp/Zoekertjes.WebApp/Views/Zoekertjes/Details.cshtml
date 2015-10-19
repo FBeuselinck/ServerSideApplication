@@ -1,0 +1,38 @@
+﻿@model Zoekertje
+
+<h2>
+    @Html.DisplayFor(Zoekertje => Zoekertje.Titel)
+</h2>
+
+<p>
+    <b>@Html.LabelFor(Zoekertje => Zoekertje.Omschrijving)</b>
+    @Html.DisplayFor(Zoekertje => Zoekertje.Omschrijving)
+    <br />
+
+    <b>@Html.LabelFor(Zoekertje => Zoekertje.Prijs)</b>
+    €
+    @Html.DisplayFor(Zoekertje => Zoekertje.Prijs)
+    <br />
+
+    <b>@Html.LabelFor(Zoekertje => Zoekertje.LocatieId)</b>
+    @ViewBag.Locatie
+    <br />
+
+    <b>@Html.LabelFor(Zoekertje => Zoekertje.CategorieId)</b>
+    @ViewBag.Categorie
+    <br />
+
+    @if (Model.ContacteerViaTelefoon)
+    {
+        <b>Contacteren via telefoon mogelijk op het nr: </b>
+        @Html.DisplayFor(Zoekertje => Zoekertje.Telefoon)
+        <br />
+    }
+    
+    @if (Model.ContacteerViaEMail)
+    {
+        <b>Contacteren via e-mail mogelijk op het adres: </b>
+        @Html.DisplayFor(Zoekertje => Zoekertje.Email)
+    }
+</p>
+@Html.ActionLink("<< terug", "Index")

@@ -1,0 +1,21 @@
+﻿<h2>Overzicht bestelling</h2>
+<p>
+    <h3>Gegevens</h3>
+    @ViewBag.Company <br />
+    @ViewBag.FirstName<br />
+    @ViewBag.LastName<br />
+    @ViewBag.Tablet  <br />
+
+    <h3>Accessoires</h3>
+    <ul>
+        @if (ViewBag.Case)
+        {
+            <li>Hoesje</li>
+        }
+        @if (ViewBag.Assurance)
+        {
+            <li>Verzekering</li>
+        }
+    </ul>
+
+</p>

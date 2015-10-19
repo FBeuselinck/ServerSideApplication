@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Stap1";
+}
+
+<h2>Bestel (Stap 1)</h2>
+<p>Alle velden zijn verplicht in te vullen.</p>
+<form action="/Bestel/Stap2" method="post">
+    <div>
+        <label for="bedrijf">Bedrijf</label>
+        <input type="text" id="bedrijf" name="bedrijf" />
+    </div>
+    <div>
+        <label for="voornaam">Voornaam</label>
+        <input type="text" id="voornaam" name="voornaam" />
+    </div>
+    <div>
+        <label for="achternaam">Achternaam</label>
+        <input type="text" id="achternaam" name="achternaam" />
+    </div>
+    <div>
+        <input type="submit" value="Bestel" name="bestel" />
+    </div>
+</form>

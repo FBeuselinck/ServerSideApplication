@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoekertjes.WebApp", "Zoekertjes.WebApp\Zoekertjes.WebApp.csproj", "{D3C79CC4-C19E-4387-BC99-D5F35A98B0DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoerktjesDesktop", "ZoerktjesDesktop\ZoerktjesDesktop.csproj", "{A3F9A127-EC1A-4759-9375-F3B730737EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoerktjes.Models", "Zoerktjes.Models\Zoerktjes.Models.csproj", "{0789050F-E06F-451F-BA3D-283F3F046BBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3C79CC4-C19E-4387-BC99-D5F35A98B0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C79CC4-C19E-4387-BC99-D5F35A98B0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C79CC4-C19E-4387-BC99-D5F35A98B0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C79CC4-C19E-4387-BC99-D5F35A98B0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F9A127-EC1A-4759-9375-F3B730737EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F9A127-EC1A-4759-9375-F3B730737EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F9A127-EC1A-4759-9375-F3B730737EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F9A127-EC1A-4759-9375-F3B730737EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0789050F-E06F-451F-BA3D-283F3F046BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0789050F-E06F-451F-BA3D-283F3F046BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0789050F-E06F-451F-BA3D-283F3F046BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0789050F-E06F-451F-BA3D-283F3F046BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

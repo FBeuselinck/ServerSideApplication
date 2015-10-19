@@ -1,0 +1,23 @@
+﻿@model Dropbox.Models.Upload
+@{
+    ViewBag.Title = "Upload";
+}
+
+@using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h2>Selecteer een bestand</h2>
+
+    <h3>Omschrijving voor bestand</h3>
+    <textarea name="description"></textarea>
+    <br />
+
+    <h3>Bestand: </h3>
+    <input type="file" name="file" value="Choose file"/>
+    <p>No file chosen</p>
+    <br />
+
+    <h3>Wie mag het bestand downloaden</h3>
+    @Html.ListBoxFor(model => model.Users, Model.Users);
+    <br />
+    <input type="submit" value="Opladen ..." />
+}

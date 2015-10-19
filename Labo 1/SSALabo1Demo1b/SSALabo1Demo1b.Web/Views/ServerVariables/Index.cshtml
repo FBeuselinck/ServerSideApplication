@@ -1,0 +1,13 @@
+﻿@model System.Collections.Specialized.NameValueCollection
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Server variables</h2>
+
+<ul>
+    @foreach (var key in Model.AllKeys)
+    {
+        <li>@key : <strong>@Model[key]</strong></li>
+    }
+</ul>

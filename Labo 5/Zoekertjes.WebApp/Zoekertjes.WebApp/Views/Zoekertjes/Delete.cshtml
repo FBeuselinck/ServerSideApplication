@@ -1,0 +1,30 @@
+﻿@model Zoekertjes.WebApp.Models.Zoekertje
+
+
+<h3>Wenst u dit zoekertje te verwijderen?</h3>
+
+
+
+@Html.DisplayFor(model => model.Titel)<br />
+
+@Html.DisplayFor(model => model.Omschrijving)
+
+
+<br /><br />
+<h4>Reden van verwijderen</h4>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    foreach (DeleteReden dr in ViewBag.DeleteRedens)
+    {
+        @Html.RadioButton("reden", dr.Id)
+        @Html.Label(dr.Naam)
+        <br />
+    }
+    <br /><br />
+    <input type="submit" value="Delete" />
+    @Html.ActionLink("Terug", "Index")
+
+}
+

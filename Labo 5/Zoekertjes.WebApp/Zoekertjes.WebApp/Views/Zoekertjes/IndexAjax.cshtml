@@ -1,0 +1,111 @@
+﻿<script>
+    $(function () {
+
+   
+        $.get('/api/zoekertjemobile', function (data) {
+
+                $('#lst').empty();
+                $.each(data, function (key, value) {
+                    $('#lst').append('<li>€ ' + value.Prijs + ' ' + value.Titel + "</li>");
+                });
+            });
+
+        $.get('/api/categorie', function (data) {
+
+            $('#cat').empty();
+            $.each(data, function (key, value) {
+                $('#cat').append('<option value=' + value.Id + '>' + value.Naam + "</option>");
+            });
+        });
+
+        $.get('/api/locatie', function (data) {
+
+            $('#loc').empty();
+            $.each(data, function (key, value) {
+                $('#loc').append('<option value=' + value.Id + '>' + value.Naam + "</option>");
+            });
+        });
+
+        $('#save').click(function (data) {
+            var titel = $('#titel').val();
+            var omschrijving = $('#omschrijving').val();
+            var naam = $('#naam').val();
+            var telefoon = $('#telefoon').val();
+            var email = $('#email').val();
+            var prijs = $('#prijs').val();
+            var cat = $('#cat').val();
+            var loc = $('#loc').val();
+            var contacteertelefoon = $('#contacteertelefoon').val();
+            var contacteerviaemail = $('#contacteerviaemail').val();
+
+            var json = {
+                Titel: titel, Omschrijving: omschrijving,
+                Naam: naam, Telefoon: telefoon, Email: email,
+                Prijs: prijs, CategorieId: cat, LocatieId: loc,
+                ContacteerViaTelefoon: contacteertelefoon,
+                ContacteerViaEMail : contacteerviaemail
+            };
+
+            $.post('/api/zoekertjemobile', json, function (data) {
+                $.each(data, function (key, value) {
+                    $('#lst').append('<li>€ ' + value.Prijs + ' ' + value.Titel + "</li>");
+                });
+                location.reload();
+            });
+        });
+ 
+ 
+    })
+</script>
+
+<ul id="lst"></ul>
+
+
+<form>
+    <h4>Nieuw zoekertje</h4>
+
+    @Html.AntiForgeryToken()
+
+    <label>Titel</label><br />
+    <input type="text" name="titel" id="titel" /><br />
+
+
+    <label>Omschrijving</label><br />
+    <input type="text" name="omschrijving" id="omschrijving" /><br />
+
+    <label>Naam</label><br />
+    <input type="text" name="naam" id="naam" /><br />
+
+    <label>Telefoon</label><br />
+    <input type="text" name="telefoon" id="telefoon" /><br />
+
+
+    <label>E-Mail</label><br />
+    <input type="text" name="email" id="email" /><br />
+
+
+    <label>Prijs</label><br />
+    <input type="text" name="prijs" id="prijs" /><br />
+
+    <label>Categorie</label><br />
+    <select name="cat" id="cat"></select><br />
+
+
+    <label>Locaties</label><br />
+    <select name="loc" id="loc"></select><br />
+
+
+
+    <label>Contacteer via telefoon</label><br />
+    <input type="checkbox" id="contacteertelefoon" /><br />
+
+    <label>Contacteer via e-mail</label><br />
+    <input type="checkbox" id="contacteerviaemail" /><br />
+
+
+    <br />    <br />
+    <input type="button" value="Save" id="save" class="btn btn-default" />
+
+
+
+</form>

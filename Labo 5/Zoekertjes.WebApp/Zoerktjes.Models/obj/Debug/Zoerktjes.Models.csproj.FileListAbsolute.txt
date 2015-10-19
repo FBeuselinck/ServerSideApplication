@@ -1,0 +1,10 @@
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 4\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.csprojResolveAssemblyReference.cache
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 4\Labo\Zoekertjes.WebApp\Zoerktjes.Models\bin\Debug\Zoerktjes.Models.dll
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 4\Labo\Zoekertjes.WebApp\Zoerktjes.Models\bin\Debug\Zoerktjes.Models.pdb
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 4\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.dll
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 4\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.pdb
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 5\Labo\Zoekertjes.WebApp\Zoerktjes.Models\bin\Debug\Zoerktjes.Models.dll
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 5\Labo\Zoekertjes.WebApp\Zoerktjes.Models\bin\Debug\Zoerktjes.Models.pdb
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 5\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.csprojResolveAssemblyReference.cache
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 5\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.dll
+C:\Users\dieter\OneDrive\NMCT\2014 - 2015\Server Side Application\Week 5\Labo\Zoekertjes.WebApp\Zoerktjes.Models\obj\Debug\Zoerktjes.Models.pdb

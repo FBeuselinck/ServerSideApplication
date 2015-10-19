@@ -1,0 +1,36 @@
+﻿<Window x:Class="ZoerktjesDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox  x:Name="lstData" />
+        <StackPanel Grid.Column="1">
+            <TextBlock>Wat zoek ik</TextBlock>
+            <TextBox x:Name="txtWat"/>
+            <TextBlock>Korte omschrijving (max 100 kar.)</TextBlock>
+            <TextBox x:Name="txtOmschrijving"/>
+            <TextBlock>Naam</TextBlock>
+            <TextBox x:Name="txtNaam"/>
+            <TextBlock>Telefoon</TextBlock>
+            <TextBox x:Name="txtTelefoon"/>
+            <TextBlock>E-Mail</TextBlock>
+            <TextBox x:Name="txtEmail"/>
+            <TextBlock>Max. Prijs</TextBlock>
+            <TextBox x:Name="txtPrijs"/>
+            <TextBlock>Wat is de categorie van het zoekertje</TextBlock>
+            <ComboBox x:Name="cmbCat"/>
+            <TextBlock>Waar kan ik het zoekertje afhalen</TextBlock>
+            <ComboBox x:Name="cmbLoc"/>
+            <TextBlock>Contacteer me via telefoon</TextBlock>
+            <CheckBox x:Name="chkTel"/>
+            <TextBlock>Contacteer me via e-mail</TextBlock>
+            <CheckBox x:Name="chkMail"/>
+            <Button x:Name="btnSave" Click="btnSave_Click">Save</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

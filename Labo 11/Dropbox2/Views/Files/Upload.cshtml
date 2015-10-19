@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Upload";
+}
+@using (Html.BeginForm("Upload", "Files", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h2>Selecteer een bestand</h2>
+    <label for="omschrijving" />
+    <input type="text" id="omschrijving" name="omschrijving" />
+   
+    <label for="file" />
+    <input type="file" id="file" name="file" />
+    
+    <label for="wie" />
+    <select id="wie" name="wie">
+        @for (int i = 0; i < ViewBag.users.Count; i++)
+        {
+            <option value="@ViewBag.users[i].UserName">@ViewBag.users[i].FirstName  @ViewBag.users[i].Name </option>
+        }
+    </select>
+  
+    <input type="submit" name="submit" value="submit" />
+}
+    

@@ -1,0 +1,84 @@
+﻿@model SSALabo2Oef2.Models.Registration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Overview</h2>
+
+<div>
+    <h4>Registration</h4>
+    <hr />
+   <h3>Personal Details</h3>
+     <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    <h3>Sessions</h3>
+    
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.Slot1)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slot2)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slot3)
+        </dd>
+
+        @if(Model.ClosingParty == true)
+        {
+            <dd>
+                I am coming to the closing party...
+            </dd>
+        }
+    </dl>
+
+    <h3>Special info</h3>
+    <dl class="dl-horizontal">
+        @if (Model.Laptop == true)
+        {
+            <dd>
+                I have a laptop
+            </dd>
+        }
+        
+        @if (Model.Apple_Watch == true)
+        {
+            <dd>
+                I have an Apple Watch
+            </dd>
+        }
+        
+        @if (Model.Tablet == true)
+        {
+            <dd>
+                I have a tablet
+            </dd>
+        }
+
+        </dl>
+        <h3>Organization</h3>
+        <dl class="dl-horizontal">
+            <dd>
+                @Html.DisplayFor(model => model.Organization)
+            </dd>
+        </dl>
+</div>
+

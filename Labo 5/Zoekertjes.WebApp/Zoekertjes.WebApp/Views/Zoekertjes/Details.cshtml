@@ -1,0 +1,37 @@
+﻿@model Zoekertje
+<h2>@Html.DisplayFor(z => z.Titel) </h2>
+
+<form>
+    <fieldset>
+        <br />
+        <br />
+        @Html.LabelFor(z => z.Omschrijving)
+        @Html.DisplayTextFor(z => z.Omschrijving)
+        <br />
+        <br />
+        @Html.LabelFor(z => z.Prijs)
+        € @Html.DisplayTextFor(z => z.Prijs)
+        <br />
+        <br />
+        @Html.LabelFor(z => z.LocatieId)
+        @ViewBag.Locatie
+        <br />
+        <br />
+        @Html.LabelFor(z => z.CategorieId)
+        @ViewBag.Categorie
+        <br />
+        <br />
+   
+        @if (Model.ContacteerViaTelefoon)
+        {
+            @Html.Label("Contacteren via telefoon mogelijk op het nr:") @Model.Telefoon
+        }
+        @if (Model.ContacteerViaEMail)
+        {
+            @Html.Label("Contacteren via e-mail mogelijk op het adres:") @Model.Email
+        }
+        </fieldset>
+    </form>
+
+@Html.ActionLink("<< terug","Index")
+

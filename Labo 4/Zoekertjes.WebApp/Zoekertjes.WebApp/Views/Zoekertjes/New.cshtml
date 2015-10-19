@@ -1,0 +1,57 @@
+﻿@model Zoekertjes.WebApp.PresentationModels.PMNewZoekertje
+
+@using (Html.BeginForm("New", "Zoekertjes", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    
+    <h4>Nieuw zoekertje</h4>
+    @Html.LabelFor(model => model.NewZoekertje.Omschrijving)     <br />
+    @Html.EditorFor(model => model.NewZoekertje.Omschrijving)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Omschrijving)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.Titel)     <br />
+    @Html.TextAreaFor(model => model.NewZoekertje.Titel)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Titel)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.Naam)     <br />
+    @Html.EditorFor(model => model.NewZoekertje.Naam)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Naam)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.Telefoon)     <br />
+    @Html.EditorFor(model => model.NewZoekertje.Telefoon)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Telefoon)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.Email)     <br />
+    @Html.EditorFor(model => model.NewZoekertje.Email)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Email)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.Prijs)     <br />
+    @Html.EditorFor(model => model.NewZoekertje.Prijs)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.Prijs)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.CategorieId)     <br />
+    @Html.DropDownListFor(model => model.NewZoekertje.CategorieId, Model.Categories)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.CategorieId)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.LocatieId)     <br />
+    @Html.DropDownListFor(model => model.NewZoekertje.LocatieId, Model.Locaties)    <br />
+    @Html.ValidationMessageFor(model => model.NewZoekertje.LocatieId)    <br />
+    <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.ContacteerViaTelefoon)   <br />
+    @Html.EditorFor(model => model.NewZoekertje.ContacteerViaTelefoon)  <br />
+    
+    @Html.LabelFor(model => model.NewZoekertje.ContacteerViaEMail)   <br />
+    @Html.EditorFor(model => model.NewZoekertje.ContacteerViaEMail)  <br />
+    
+    <input type="submit" name="create" value="create" />
+}
+

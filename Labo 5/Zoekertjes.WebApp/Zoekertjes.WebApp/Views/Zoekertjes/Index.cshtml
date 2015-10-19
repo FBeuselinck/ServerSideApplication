@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Zoekertje>
+
+<style>
+    .del{
+        width:20px;
+        height:20px;
+    }
+</style>
+<br/>
+<br/>
+    <ul>
+
+        @foreach (Zoekertje zoekertje in Model)
+        {
+            <li><a href="/zoekertjes/delete?id=@zoekertje.Id"><img class="del" src="~/Images/delete.jpg" /></a>@Html.ActionLink(zoekertje.Titel, "Details", new { Id = zoekertje.Id })</li>
+        }
+
+    </ul>
+@Html.ActionLink("Nieuwe zoekertje", "New")

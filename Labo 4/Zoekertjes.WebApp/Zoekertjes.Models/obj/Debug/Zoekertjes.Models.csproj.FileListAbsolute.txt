@@ -1,0 +1,4 @@
+C:\Users\Freek\Documents\Hogeschool\2014-2015 NMCT\SEM 1\SSA\Labo\Labo 4\Zoekertjes.WebApp\Zoekertjes.Models\bin\Debug\Zoekertjes.Models.dll
+C:\Users\Freek\Documents\Hogeschool\2014-2015 NMCT\SEM 1\SSA\Labo\Labo 4\Zoekertjes.WebApp\Zoekertjes.Models\bin\Debug\Zoekertjes.Models.pdb
+C:\Users\Freek\Documents\Hogeschool\2014-2015 NMCT\SEM 1\SSA\Labo\Labo 4\Zoekertjes.WebApp\Zoekertjes.Models\obj\Debug\Zoekertjes.Models.dll
+C:\Users\Freek\Documents\Hogeschool\2014-2015 NMCT\SEM 1\SSA\Labo\Labo 4\Zoekertjes.WebApp\Zoekertjes.Models\obj\Debug\Zoekertjes.Models.pdb

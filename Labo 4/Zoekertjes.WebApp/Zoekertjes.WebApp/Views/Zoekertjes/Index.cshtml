@@ -1,0 +1,17 @@
+﻿<!--
+       IEnumerable<Zoekertjes.WebApp.Models.Zoekertje>
+       Namespace is al toegevoegd aan Views/web.config
+-->
+@model IEnumerable<Zoekertje>
+
+@foreach (Zoekertje zoekertje in Model)
+{
+    <li>
+        <a href='@Url.Action("Delete", "Zoekertjes", new { Id = zoekertje.Id })'>
+            <img src='@Url.Content("~/Images/trashcan.png")' />
+        </a>
+        @Html.ActionLink(zoekertje.Titel, "Details", new { Id = zoekertje.Id })
+    </li>
+}
+
+@Html.ActionLink("Nieuwe Zoekertje", "New")

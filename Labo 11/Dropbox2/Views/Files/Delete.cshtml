@@ -1,0 +1,61 @@
+﻿@model Dropbox2.Models.FileRegistration
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<form action="" method="POST">
+    <div>
+        <h4>FileRegistration</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FileId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FileId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FileName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FileName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UploadTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UploadTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+            @Html.HiddenFor(model=>model.FileId)
+        </dl>
+    </div>
+    <input type="submit" name="button" value="Delete"/>
+</form>
+<p>
+   
+
+   
+</p>
